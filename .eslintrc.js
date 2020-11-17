@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   root: true,
   extends: [
@@ -32,6 +34,11 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
         paths: ['./src'],
+      },
+      alias: {
+        assets: path.resolve(__dirname, 'src/assets'),
+        components: path.resolve(__dirname, 'src/components'),
+        modules: path.resolve(__dirname, 'src/modules'),
       },
     },
   },
